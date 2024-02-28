@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import React, {useRef, useState } from 'react'
 import css from './Header.module.scss'
-import { BiMenuAltRight, BiPhoneCall } from 'react-icons/bi'
+import { BiMenuAltRight} from 'react-icons/bi'
 import { motion } from 'framer-motion'
 import { getMenuStyles, headerVariants } from '../../utils/motion.js'
 import useHeaderShadow from "../../hooks/useHeaderShadow.jsx"
+import useOutsideAlerter from "../../hooks/useOutsideAlerter.jsx"
 const Header = () => {
 
   const [menuOpened, setMenuOpened] = useState(false);
-  const headerShadow = useHeaderShadow()
+  const headerShadow = useHeaderShadow();
+  const menuRef = useRef();
+
+  useOutsideAlerter(
+    {
+      menuRef,
+      setMenuOpened
+    }
+  )
 
   return (
     <motion.div
@@ -22,15 +31,11 @@ const Header = () => {
         <div className={css.name}>Max</div>
 
         <ul
+        ref={menuRef}
           style={getMenuStyles(menuOpened)}
           className={`flexCenter ${css.menu}`}>
-          <li><a href="">Services</a></li>
-          <li><a href="">Experience</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">Testimonials</a></li>
-          <li className={`flexCenter ${css.phone}`}><p>+1-232-334-4332</p>
-            <BiPhoneCall size={'40px'} />
-          </li>
+          <li><a href="#experties">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
         </ul>
 
         {/* only for medium and small screens*/}

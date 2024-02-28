@@ -11,32 +11,13 @@ const Experties = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
             className={css.wrapper}>
+
+            <a className="anchor" id="experties"></a>
             <div className={`paddings yPaddings flexCenter innerWidth ${css.container}`}>
-                <div className={css.leftSide}>
 
-                    {
-                        projectExperience.map((exp, i) => {
-                            return (
-                                <motion.div
-                                variants={fadeIn("right", "tween", (i+1)*0.2, 1)}
-                                 className={css.exp} key={i}>
-                                    <div className="flexCenter" style={{ background: exp.bg }}>
-                                        <exp.icon size={25} color="white" />
-                                    </div>
-
-                                    <div>
-                                        <span>{exp.name}</span>
-                                        <span className="secondaryText" >{exp.projects} projects</span>
-                                    </div>
-                                </motion.div>
-                            );
-                        })
-                    }
-                </div>
-
-                <motion.div 
-                variants={textVariant(0.5)}
-                className={css.rightSide}>
+            <motion.div
+                    variants={textVariant(0.5)}
+                    className={css.rightSide}>
                     <span className="primaryText" >What do I help?</span>
                     {
                         WhatDoIHelp.map((paragraph, i) => {
@@ -47,15 +28,36 @@ const Experties = () => {
 
                     <div className={`flexCenter ${css.stats}`}>
                         <div className={`flexCenter ${css.stat}`}>
-                            <span className="primaryText" >285+</span>
-                            <span className="SecondaryText">Projects Completed</span>
+                            <span className="SecondaryText">Discover the power of tailored IDX websites</span>
                         </div>
                         <div className={`flexCenter ${css.stat}`}>
-                            <span className="primaryText">119+</span>
-                            <span className="SecondaryText" >Happy Clients</span>
+                            <span className="primaryText">Get Started</span>
                         </div>
-                    </div>
+                </div>
                 </motion.div>
+
+                <div className={css.leftSide}>
+
+                    {
+                        projectExperience.map((exp, i) => {
+                            return (
+                                <motion.div
+                                    variants={fadeIn("right", "tween", (i + 1) * 0.2, 1)}
+                                    className={css.exp} key={i}>
+                                    <div className="flexCenter" style={{ background: exp.bg }}>
+                                        <exp.icon size={25} color="white" />
+                                    </div>
+
+                                    <div>
+                                        <span>{exp.name}</span>
+                                    </div>
+                                </motion.div>
+                            );
+                        })
+                    }
+                </div>
+
+               
             </div>
         </motion.section>
     )
