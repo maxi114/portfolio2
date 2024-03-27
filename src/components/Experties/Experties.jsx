@@ -18,7 +18,7 @@ const Experties = () => {
             <motion.div
                     variants={textVariant(0.5)}
                     className={css.rightSide}>
-                    <span className="primaryText" >What do I help?</span>
+                    <span className="primaryText" >What I'll do for you</span>
                     {
                         WhatDoIHelp.map((paragraph, i) => {
                             return <span className="secondaryText" key={i} >{paragraph}</span>
@@ -31,7 +31,9 @@ const Experties = () => {
                             <span className="SecondaryText">Discover the power of tailored IDX websites</span>
                         </div>
                         <div className={`flexCenter ${css.stat}`}>
-                            <span className="primaryText">Get Started</span>
+                            <a href="https://calendly.com/maxkodi081/free-consultation" target='_blank'>
+                            <span className={`primaryText ${css.statt}`}>Get Started</span>
+                            </a>
                         </div>
                 </div>
                 </motion.div>

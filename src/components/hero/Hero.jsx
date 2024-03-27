@@ -60,7 +60,8 @@ const Hero = () => {
                         variants={fadeIn("right", "tween", 0.3, 1)}
                         className={css.experience}>
                         <div className='secondaryText'>
-                            <a href="mailto:maximilliankodi@gmail.com" className={css.email} >Get Started</a>
+                            <a href="https://calendly.com/maxkodi081/free-consultation" target='_blank'
+                            className={css.email} >Get Started</a>
                         </div>
                     </motion.div>
 

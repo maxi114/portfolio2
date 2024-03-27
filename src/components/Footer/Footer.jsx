@@ -21,7 +21,7 @@ const Footer = () => {
                     </span>
 
                     <span className='primaryText'>
-                        Start by <a href="mailto:maximilliankodi@gmail.com">Saying hi</a>
+                        Start by <a href="https://calendly.com/maxkodi081/free-consultation" target='_blank' >booking a consultation</a>
                     </span>
                 </div>
                 <div className={css.right}>

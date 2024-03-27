@@ -1,23 +1,23 @@
 @import '../../styles/contants.scss';
 
-.wrapper{
+.wrapper {
     background: white;
 
-    .container{
+    .container {
         align-items: flex-start;
         gap: 2rem;
         flex-wrap: wrap;
 
-        >div{
+        >div {
             flex: 1;
         }
 
-        .leftSide{
+        .leftSide {
             display: flex;
             flex-direction: column;
             gap: 2rem;
 
-            .exp{
+            .exp {
                 display: flex;
                 align-items: center;
                 border: 1px solid $secondary-white;
@@ -27,7 +27,7 @@
                 transition: all 200ms ease-out;
 
                 //icon circles
-                >:nth-child(1){
+                >:nth-child(1) {
                     padding: 10px;
                     width: 3rem;
                     height: 3rem;
@@ -35,20 +35,21 @@
                 }
 
                 //desciption
-                >:nth-child(2){
+                >:nth-child(2) {
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
 
-                    >:nth-child(1){
+                    >:nth-child(1) {
                         font-size: 1.6rem;
                         font-weight: bold;
                     }
                 }
             }
         }
-        .rightSide{
-            @media(max-width: $sm){
+
+        .rightSide {
+            @media(max-width: $sm) {
                 text-align: center;
             }
 
@@ -56,14 +57,34 @@
             flex-direction: column;
             gap: 2rem;
 
-            .stats{
+            .stats {
                 justify-content: flex-start;
                 gap: 4rem;
             }
 
-            .stat{
+            .stat {
                 flex-direction: column;
                 justify-content: flex-start;
+
+                a {
+                    text-decoration: none;
+                    border: 1px solid $secondary-white;
+                    border-radius: 20px;
+                    padding: 1.5rem;
+                    background-color: #5E3BEE;
+                    color: white;
+
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: 0px 21px 13px rgba(0, 0, 0, 13%);
+                    }
+
+                    .statt{
+                        font-size: 20px;
+                       
+                    }
+
+                }
             }
         }
 
